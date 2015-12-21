@@ -42,7 +42,7 @@ paste("The Average Number of Steps Taken Per Day Was",as.integer(mean(stepsTotal
 paste("The Meaian Steps Per Day Was", as.integer(median(stepsTotal$Steps)),"Steps")
 ```
 #2C  - Create histogram of steps per day 
-```{r, echo=FALSE}
+```{r}
 hist(stepsTotal$Steps, breaks=5, xlab="Steps", main = "Total Steps Per Day", col = "turquoise")
 ```
 
@@ -64,7 +64,7 @@ str(intervalTable)
 ```
 
 #3C Create the required line plot of average steps per interval data 
-```{r, echo=FALSE}
+```{r}
 p <- ggplot(intervalTable, aes(x=interval, y=Avg), xlab = "Interval", ylab="Average Number of Steps")
 p + geom_line()+xlab("Interval")+ylab("Average Number of Steps")+ggtitle("Average Number of Steps per Interval")
 ```
@@ -106,7 +106,7 @@ paste("The Mean Number of Steps With NA Data Accounted For Is", as.integer(mean(
 paste("The Median Of Steps With NA Data Accounted For Is", as.integer(median(stepsTotal2$Steps)), "Steps")
 ```
 
-```{r, echo=FALSE}
+```{r}
 hist(stepsTotal2$Steps, breaks=5, xlab="Steps", main = "Total Steps per Day with NAs Fixed", col="Black")
 hist(stepsTotal$Steps, breaks=5, xlab="Steps", main = "Total Steps per Day with NAs Fixed", col="Turquoise", add=T)
 legend("topright", c("Imputed Data", "Non-NA Data"), fill=c("black", "turquoise") )
@@ -127,7 +127,7 @@ library(lattice)
 intervalTable2 <- ddply(mergeData, .(interval, DayCategory), summarize, Avg = mean(steps))
 ```
 
-```{r, echo=FALSE}
+```{r}
 xyplot(Avg~interval|DayCategory, data=intervalTable2, type="l",  layout = c(1,2),
        main="Average Steps per Interval Based on Type of Day", 
        ylab="Average Number of Steps", xlab="Interval")
@@ -136,3 +136,4 @@ xyplot(Avg~interval|DayCategory, data=intervalTable2, type="l",  layout = c(1,2)
 ```{r}
 # Finding : Overall the step data varies between weekday and weekend. Various reasons could be the cause for this. 
 ```
+knit2html("/Users/lylestewart/Desktop/Coursera/Reproducible Research/PA1.rmd", output = PA1.html)
