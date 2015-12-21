@@ -1,0 +1,18 @@
+# QUESTION:  Calculate mean/median of steps per day
+# ANSWERS: 
+      # 10766 Avg Steps 
+      # 10765 Median Steps 
+
+# QUESTION: Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
+# ANSWERS: 
+      #"The Max Number Of Steps In A 5 Minute Interval Was 206 Steps"
+      #"The 5 Minute Interval That Contained The Max Average Number of Steps Was The 835 Interval"
+
+# QUESTION: Do the mean and media values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
+# ANSWER: 
+      #New Median = 11015, Old Median = 10765 steps. 
+      #New Mean = 10821 steps, Old Mean = 10766 steps.
+      #Distribution Shape has not Changed at all. 
+
+# QUESTION: Are there differences in activity patterns between weekdays and weekends? - Make Interval Time Series
+# ANSWER: # Finding : Overall the step data varies between weekday and weekend. Various reasons could be the cause for this. 
